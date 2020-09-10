@@ -22,4 +22,4 @@ Features include:
 * Add, update, get customer credit score.
 * Apply for a credit loan.
 * API Documentation with [OpenApi Swagger](https://swagger.io/).
-* Frontend with [Next.js](https://nextjs.org/), [React](https://reactjs.org/), and TypeScript(https://www.typescriptlang.org/)
+* Frontend with [Next.js](https://nextjs.org/), [React](https://reactjs.org/), and [TypeScript](https://www.typescriptlang.org/)
