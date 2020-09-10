@@ -39,3 +39,7 @@ Demo national ids:
 - 1234
 - 12345
 - 12345678
+
+Missing features:
+- i18n support
+- ...
