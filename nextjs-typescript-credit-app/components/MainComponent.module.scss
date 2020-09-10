@@ -1,0 +1,68 @@
+.content{
+  width: 50%;
+  margin-left: 25%;
+  padding: 5px;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+.inputDiv{
+  margin-right: 30%;
+  float: right;
+  padding: 4px;
+}
+
+.nameLabel{
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.title{
+  text-align: center;
+  margin: 24px 0 12px 0;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.subtitle{
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.userInput{
+  padding: 2px;
+  border-radius: 4px;
+  border: 1px black solid;
+}
+
+.buttonApp{
+  width: 20%;
+  border-radius: 5px;
+  border: none;
+  height: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 10px 40% 20px;
+  outline: none;
+  cursor: pointer;
+  &:hover{
+    color: white;
+    background-color: aquamarine;
+  }
+  &:active {
+    background-color: gray;
+  }
+}
+
+.creditResult{
+  font-size: 16px ;
+  font-weight: 600;
+  color: chocolate;
+  width: inherit;
+  margin-left: inherit;
+  text-align: center;
+}

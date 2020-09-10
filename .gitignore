@@ -1,0 +1,4 @@
+# Project exclude paths
+/nextjs-typescript-credit-app/node_modules/
+# Project exclude paths
+/credit-manager-app/target/
