@@ -23,3 +23,13 @@ Features include:
 * Apply for a credit loan.
 * API Documentation with [OpenApi Swagger](https://swagger.io/).
 * Frontend with [Next.js](https://nextjs.org/), [React](https://reactjs.org/), and [TypeScript](https://www.typescriptlang.org/)
+
+Run on local with:
+```
+//frontend
+ npm run build 
+ npm start 
+ 
+ // backend
+ java -jar target/credit-manager-app-0.0.1-SNAPSHOT.jar
+```
