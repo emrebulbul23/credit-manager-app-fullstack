@@ -33,3 +33,9 @@ Run on local with:
  // backend
  java -jar target/credit-manager-app-0.0.1-SNAPSHOT.jar
 ```
+
+Demo national ids:
+- 123
+- 1234
+- 12345
+- 12345678
