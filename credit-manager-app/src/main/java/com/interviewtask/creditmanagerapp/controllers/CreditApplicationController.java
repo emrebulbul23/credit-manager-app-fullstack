@@ -32,7 +32,7 @@ public class CreditApplicationController {
      * @param sc Customer applying for the credit.
      * @return CreditResultResponse
      */
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin
     @Operation(summary = "Apply for a credit.")
     @PostMapping("")
     public ResponseEntity applyForCredit(@RequestBody SimpleCustomer sc) {
@@ -41,12 +41,12 @@ public class CreditApplicationController {
         }
         Customer customer = new Customer(sc);
         Optional<CreditScore> byId = creditScoreRepository.findById(customer.getNationalIdNo());
-        if (byId.isEmpty()) {
+        if (!byId.isPresent()) {
             return ResponseEntity.status(404).body("Credit score cannot be found for given customer");
         }
         Integer creditScore = byId.get().getCreditScore();
         Optional<Customer> customerOptional = customerRepository.findById(customer.getNationalIdNo());
-        if (customerOptional.isEmpty()) {
+        if (!customerOptional.isPresent()) {
             return ResponseEntity.ok().body(computeCreditResult(customer, creditScore));
         } else {
             Customer customerBefore = customerOptional.get();

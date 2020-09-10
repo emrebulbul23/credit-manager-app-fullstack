@@ -24,11 +24,11 @@ public class SimpleCustomer {
     }
 
     public boolean validate(){
-        return !(nationalIdNo.isBlank() ||
-                firstName.isBlank() ||
-                lastName.isBlank() ||
+        return !(nationalIdNo.isEmpty() ||
+                firstName.isEmpty() ||
+                lastName.isEmpty() ||
                 monthlyIncome < 0 ||
-                telephoneNumber.isBlank());
+                telephoneNumber.isEmpty());
     }
 
     public String getFirstName() {

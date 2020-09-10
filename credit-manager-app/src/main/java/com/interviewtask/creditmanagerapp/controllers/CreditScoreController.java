@@ -28,26 +28,15 @@ public class CreditScoreController {
      * @param id Customer's national id number.
      * @return CreditScore object of the customer.
      */
+    @CrossOrigin
     @Operation(summary = "Get a customer's credit score.")
     @GetMapping(value="")
     public CreditScore getCreditScoreWithNationalId(String id){
         Optional<CreditScore> byId = creditScoreRepository.findById(id);
-        if (byId.isEmpty()) {
+        if (!byId.isPresent()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "CreditScore is not found");
         }
         return byId.get();
-    }
-
-    /**
-     * Get a customer's credit score with their national id number.
-     * @param id Customer's national id number.
-     * @return CreditScore object of the customer.
-     */
-    @CrossOrigin(origins = "http://localhost:3000")
-    @Operation(summary = "Get a customer's credit score.")
-    @GetMapping(value="get")
-    public String get(String id){
-        return "hello emre";
     }
 
     /**
@@ -56,13 +45,13 @@ public class CreditScoreController {
      * @param cs CreditScore of customer.
      * @return ResponseEntity
      */
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin
     @Operation(summary = "Add or update a customers credit score.")
     @PostMapping(value="")
     public ResponseEntity<String> putCreditScore(@RequestBody CreditScore cs){
         Optional<CreditScore> byId = creditScoreRepository.findById(cs.getNationalIdNo());
         creditScoreRepository.save(cs);
-        if (byId.isEmpty()) {
+        if (!byId.isPresent()) {
             return ResponseEntity.ok("New Credit Score is added!");
         }
         return ResponseEntity.ok("Credit Score is updated!");
