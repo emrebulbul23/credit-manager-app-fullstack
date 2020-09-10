@@ -3,9 +3,9 @@
 Live demo:
 <h>
 
-AWS Link (frontend) : http://ec2-18-217-8-127.us-east-2.compute.amazonaws.com/
+AWS Link (frontend) : ec2-18-222-30-245.us-east-2.compute.amazonaws.com:3000/
 
-AWS Link (backend-swagger) : http://18.217.8.127:8080/swagger-ui.html
+AWS Link (backend-swagger) : ec2-18-222-30-245.us-east-2.compute.amazonaws.com:8080/swagger-ui.html
 
 A very simple implementation of a credit loan application.
 
