@@ -41,5 +41,6 @@ Demo national ids:
 - 12345678
 
 Missing features:
-- i18n support
+- i18n support,
+- Input validation on ui side,
 - ...
